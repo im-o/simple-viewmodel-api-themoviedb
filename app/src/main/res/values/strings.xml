@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">Sample ViewModel</string>
-    <string name="set_random_data">Set Random Data</string>
+    <string name="get_api_data">Get API Data</string>
+    <string name="click_me">Hello, Click button below to change me!</string>
 </resources>

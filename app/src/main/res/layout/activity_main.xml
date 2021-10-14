@@ -10,9 +10,8 @@
         android:id="@+id/resultTV"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="64dp"
-        android:gravity="center"
-        android:text="Hello World!"
+        android:layout_marginTop="32dp"
+        android:text="@string/click_me"
         app:layout_constraintEnd_toEndOf="@+id/actionMB"
         app:layout_constraintStart_toStartOf="@+id/actionMB"
         app:layout_constraintTop_toTopOf="parent" />
@@ -24,10 +23,20 @@
         android:layout_marginStart="24dp"
         android:layout_marginTop="32dp"
         android:layout_marginEnd="24dp"
-        android:text="@string/set_random_data"
+        android:text="@string/get_api_data"
         android:textAllCaps="false"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/resultTV" />
+
+    <ProgressBar
+        android:visibility="gone"
+        android:id="@+id/loadingPB"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/actionMB"
+        app:layout_constraintStart_toStartOf="@+id/actionMB"
+        app:layout_constraintTop_toBottomOf="@+id/actionMB" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
