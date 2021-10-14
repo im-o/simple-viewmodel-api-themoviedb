@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Sample ViewModel</string>
+    <string name="set_random_data">Set Random Data</string>
 </resources>

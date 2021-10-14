@@ -1,7 +1,11 @@
 package com.rivaldy.id.sampleviewmodel.ui
 
+import androidx.lifecycle.LiveData
+import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-import androidx.lifecycle.liveData
+import androidx.lifecycle.viewModelScope
+import kotlinx.coroutines.launch
+import java.util.*
 
 /**
  * Created by rivaldy on 13/10/21
@@ -9,11 +13,14 @@ import androidx.lifecycle.liveData
  **/
 
 class MainViewModel : ViewModel() {
-    fun loadUserData() = liveData {
-        emit(sampleData())
+    private val _userData: MutableLiveData<String> = MutableLiveData()
+    val userData: LiveData<String> = _userData
+
+    fun loadUserData() = viewModelScope.launch {
+        _userData.value = "Hello, Click button below to change me!"
     }
 
-    private fun sampleData(): String {
-        return "Hello ini sample data"
+    fun setSampleData() {
+        _userData.value = "Yay! you change me with live data : ${Calendar.getInstance().time.time}"
     }
 }
